@@ -8,6 +8,7 @@ from joblib import dump
 from joblib import load
 from training import prediction
 import requests
+from waitress import serve
 app = flask.Flask(__name__)
 
 data = [{'name':'Delhi', "sel": "selected"}, {'name':'Mumbai', "sel": ""}, {'name':'Kolkata', "sel": ""}, {'name':'Bangalore', "sel": ""}, {'name':'Chennai', "sel": ""}]
@@ -98,4 +99,4 @@ def get_predicts():
         return render_template('predicts.html', cities=cities, cityname="Oops, we weren't able to retrieve data for that city.")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    serve(app, host="0.0.0.0", port=8080)
