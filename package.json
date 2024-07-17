@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "are-we-there-yet": "^4.0.2",
+    "debug": "^4.3.5",
+    "gauge": "^5.0.2",
+    "glob": "^11.0.0",
+    "inflight": "^1.0.6",
+    "rimraf": "^6.0.1",
+    "uuid": "^10.0.0"
+  }
+}
